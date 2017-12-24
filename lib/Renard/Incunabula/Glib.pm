@@ -6,6 +6,7 @@ use strict;
 use warnings;
 
 use Glib;
+use List::MoreUtils qw(zip);
 
 =method Inline
 
@@ -27,6 +28,14 @@ sub Inline  {
 	# shell parsing / quoting bug that causes INC to quote parts that
 	# should not be quoted.
 	$config->{CCFLAGSEX} = delete $config->{INC};
+
+	# Add the Glib.pm dynamic library to access the `gperl` symbols. This
+	# is usually handled automatically by simply loading Glib.pm via
+	# DynaLoader, but on Windows, it must be explicitly linked.
+	if( $^O eq 'MSWin32') {
+		my %dl_module_to_so = zip( @DynaLoader::dl_modules, @DynaLoader::dl_shared_objects );
+		$config->{MYEXTLIB} = $dl_module_to_so{Glib};
+	}
 
 	$config->{AUTO_INCLUDE} = <<C;
 #include <gperl.h>
