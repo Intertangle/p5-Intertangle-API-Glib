@@ -23,10 +23,10 @@ sub Inline  {
 
 	my $config = +{ map { uc($_) => $ref->{$_} } qw(inc libs typemaps) };
 
-	# Set CCFLAGS to the value of INC directly. This is to get around some
+	# Set CCFLAGSEX to the value of INC directly. This is to get around some
 	# shell parsing / quoting bug that causes INC to quote parts that
 	# should not be quoted.
-	$config->{CCFLAGS} = delete $config->{INC};
+	$config->{CCFLAGSEX} = delete $config->{INC};
 
 	$config->{AUTO_INCLUDE} = <<C;
 #include <gperl.h>
