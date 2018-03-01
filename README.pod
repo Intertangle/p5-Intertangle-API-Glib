@@ -19,6 +19,10 @@ version 0.001
 Returns the flags needed to configure L<Inline::C> for using the
 L<Glib> XS API.
 
+=head1 SEE ALSO
+
+L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-Incunabula-Glib/>
+
 =head1 AUTHOR
 
 Project Renard
