@@ -5,7 +5,7 @@ use Test::Most tests => 1;
 use Modern::Perl;
 
 use Module::Load;
-use Renard::Incunabula::API::Glib;
+use Renard::API::Glib;
 
 subtest "Testing Glib" => sub {
 	eval { load 'Inline::C' } or do {
@@ -13,7 +13,7 @@ subtest "Testing Glib" => sub {
 		plan skip_all => "Inline::C not installed" if $error;
 	};
 
-	Inline->import( with => qw(Renard::Incunabula::API::Glib) );
+	Inline->import( with => qw(Renard::API::Glib) );
 
 	subtest 'Typemap for gchar* works' => sub {
 		Inline->bind( C => q|

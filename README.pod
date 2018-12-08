@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-Renard::Incunabula::Glib - Helper for using Glib
+Renard::API::Glib - Helper for using Glib
 
 =head1 VERSION
 
@@ -14,14 +14,14 @@ version 0.001
 
 =head2 Inline
 
-  use Inline C with => qw(Renard::Incunabula::Glib);
+  use Inline C with => qw(Renard::API::Glib);
 
 Returns the flags needed to configure L<Inline::C> for using the
 L<Glib> XS API.
 
 =head1 SEE ALSO
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-Incunabula-Glib/>
+L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-API-Glib/>
 
 =head1 AUTHOR
 
