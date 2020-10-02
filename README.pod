@@ -4,7 +4,7 @@
 
 =head1 NAME
 
-Renard::API::Glib - Helper for using Glib
+Intertangle::API::Glib - Helper for using Glib
 
 =head1 VERSION
 
@@ -14,22 +14,20 @@ version 0.001
 
 =head2 Inline
 
-  use Inline C with => qw(Renard::API::Glib);
+  use Inline C with => qw(Intertangle::API::Glib);
 
 Returns the flags needed to configure L<Inline::C> for using the
 L<Glib> XS API.
 
 =head1 SEE ALSO
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-API-Glib/>
-
 =head1 AUTHOR
 
-Project Renard
+Zakariyya Mughal <zmughal@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2017 by Project Renard.
+This software is copyright (c) 2017 by Zakariyya Mughal.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

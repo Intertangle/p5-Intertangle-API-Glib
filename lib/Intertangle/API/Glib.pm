@@ -1,5 +1,5 @@
 use Modern::Perl;
-package Renard::API::Glib;
+package Intertangle::API::Glib;
 # ABSTRACT: Helper for using Glib
 
 use strict;
@@ -10,7 +10,7 @@ use List::MoreUtils qw(zip);
 
 =method Inline
 
-  use Inline C with => qw(Renard::API::Glib);
+  use Inline C with => qw(Intertangle::API::Glib);
 
 Returns the flags needed to configure L<Inline::C> for using the
 L<Glib> XS API.
@@ -49,4 +49,4 @@ __END__
 
 =head1 SEE ALSO
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Renard-API-Glib/>
+
